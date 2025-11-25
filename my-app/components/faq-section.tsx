@@ -52,7 +52,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-20 md:py-32">
+    <section id="faq" className="bg-white py-20 md:py-32">
       <div className="mx-auto max-w-4xl px-6 md:px-12 lg:px-20">
         
         {/* Header Section */}
@@ -73,7 +73,7 @@ const FAQSection = () => {
             style={{ willChange: "transform, opacity" }}
             className="inline-flex items-center justify-center mb-6"
           >
-            <span className="bg-blue-500 text-white text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wide">
+            <span className="bg-[#1A4D8F] text-white text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wide">
               FAQ's
             </span>
           </motion.div>
@@ -84,7 +84,7 @@ const FAQSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F2937] mb-4"
           >
             Common Questions With Clear Answers
           </motion.h2>
@@ -95,7 +95,7 @@ const FAQSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.3 }}
-            className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto"
+            className="text-[#6B7280] text-base md:text-lg max-w-2xl mx-auto"
           >
             Here are answers to the most common things people ask before getting started.
           </motion.p>
@@ -112,7 +112,7 @@ const FAQSection = () => {
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.4 + index * 0.1 }}
               whileHover={{ scale: 1.01 }}
               style={{ willChange: "transform, opacity" }}
-              className="bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-md"
+              className="bg-white border border-[#E5E7EB] rounded-lg overflow-hidden transition-all duration-200 hover:shadow-md"
             >
               {/* Question Button */}
               <motion.button
@@ -120,15 +120,15 @@ const FAQSection = () => {
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 style={{ willChange: "transform" }}
-                className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
+                className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none focus:ring-2 focus:ring-[#1A4D8F] focus:ring-offset-2 rounded-lg"
               >
-                <span className="text-lg md:text-xl font-semibold text-gray-900 pr-8">
+                <span className="text-lg md:text-xl font-semibold text-[#1F2937] pr-8">
                   {item.question}
                 </span>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="flex-shrink-0 text-gray-600"
+                  className="flex-shrink-0 text-[#6B7280]"
                 >
                   {openIndex === index ? (
                     <MinusIcon />
@@ -150,12 +150,12 @@ const FAQSection = () => {
                     className="overflow-hidden"
                   >
                     <div className="px-6 md:px-8 pb-6 md:pb-8">
-                      <div className="pt-0 border-t border-gray-100">
+                        <div className="pt-0 border-t border-[#E5E7EB]">
                         <motion.p
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.3, delay: 0.1 }}
-                          className="text-gray-600 text-base md:text-lg leading-relaxed pt-6"
+                          className="text-[#6B7280] text-base md:text-lg leading-relaxed pt-6"
                         >
                           {item.answer}
                         </motion.p>

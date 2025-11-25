@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 
 const AiSupplyPage = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-gray-200">
+    <div id="features" className="min-h-screen bg-[#F3F4F6] text-[#1F2937] font-sans selection:bg-[#A5D8FF]">
       
       {/* --- Header Section --- */}
       <motion.header
@@ -21,7 +21,7 @@ const AiSupplyPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 120, damping: 20, delay: 0.1 }}
-          className="text-xs font-bold tracking-[0.2em] uppercase mb-6 text-gray-900"
+          className="text-xs font-bold tracking-[0.2em] uppercase mb-6 text-[#1A4D8F]"
         >
           Introducing AI Supply
         </motion.p>
@@ -30,7 +30,7 @@ const AiSupplyPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
-          className="font-serif text-5xl md:text-7xl text-gray-900 leading-[1.1]"
+          className="font-serif text-5xl md:text-7xl text-[#1F2937] leading-[1.1]"
         >
           AI agents designed to think, <br className="hidden md:block" />
           act, and deliver at scale
@@ -50,7 +50,7 @@ const AiSupplyPage = () => {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.1 }}
             style={{ willChange: "transform, opacity" }}
-            className="bg-gray-50 p-8 md:p-12 rounded-sm flex flex-col"
+            className="bg-white p-8 md:p-12 rounded-sm flex flex-col border border-[#E5E7EB]"
           >
             {/* Graphic Image */}
             <motion.div
@@ -69,10 +69,10 @@ const AiSupplyPage = () => {
             </motion.div>
             
             <div className="mt-auto">
-              <h3 className="text-2xl md:text-3xl font-normal mb-4 text-gray-900">
+              <h3 className="text-2xl md:text-3xl font-normal mb-4 text-[#1F2937]">
                 Unify and Analyze All Your Data
               </h3>
-              <p className="text-gray-600 leading-relaxed text-lg font-light">
+              <p className="text-[#6B7280] leading-relaxed text-lg font-light">
                 Connect internal docs, third-party tools, and real-time inputs into a single intelligent interface. Let AI surface insights that drive smarter, more confident business decisions.
               </p>
             </div>
@@ -85,7 +85,7 @@ const AiSupplyPage = () => {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.2 }}
             style={{ willChange: "transform, opacity" }}
-            className="bg-gray-50 p-8 md:p-12 rounded-sm flex flex-col"
+            className="bg-white p-8 md:p-12 rounded-sm flex flex-col border border-[#E5E7EB]"
           >
             {/* Graphic Image */}
             <motion.div
@@ -104,10 +104,10 @@ const AiSupplyPage = () => {
             </motion.div>
 
             <div className="mt-auto">
-              <h3 className="text-2xl md:text-3xl font-normal mb-4 text-gray-900">
+              <h3 className="text-2xl md:text-3xl font-normal mb-4 text-[#1F2937]">
                 Automate High-Frequency Workflows
               </h3>
-              <p className="text-gray-600 leading-relaxed text-lg font-light">
+              <p className="text-[#6B7280] leading-relaxed text-lg font-light">
                 AI Supply agents break down complex tasks into clear, traceable steps. Eliminate repetitive work and scale your team's output with unmatched efficiency and precision.
               </p>
             </div>
@@ -135,11 +135,11 @@ const AiSupplyPage = () => {
               style={{ willChange: "transform, opacity" }}
               className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center"
             >
-              <h2 className="text-3xl md:text-5xl font-normal mb-6 text-gray-900 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-normal mb-6 text-[#1F2937] leading-tight">
                 Accelerate Execution <br />
                 with Reliable Autonomy
               </h2>
-              <p className="text-gray-600 leading-relaxed text-lg font-light mb-10 max-w-md">
+              <p className="text-[#6B7280] leading-relaxed text-lg font-light mb-10 max-w-md">
                 Our agents don't just assist — they complete tasks end-to-end with accountability and speed. Track progress, refine outputs, and get results faster.
               </p>
               
@@ -149,12 +149,12 @@ const AiSupplyPage = () => {
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   style={{ willChange: "transform" }}
-                  className="bg-gray-900 text-white px-6 py-3 text-sm font-medium rounded-sm hover:bg-gray-800 transition-colors"
+                  className="bg-[#1A4D8F] text-white px-6 py-3 text-sm font-medium rounded-sm hover:bg-[#0F2344] transition-colors"
                 >
                   View use cases
                 </motion.button>
                 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 hidden">
                   {/* Avatar Stack */}
                   <div className="flex -space-x-3">
                     {['from-blue-500 to-blue-600', 'from-purple-500 to-purple-600', 'from-green-500 to-green-600'].map((gradient, i) => (
@@ -182,7 +182,7 @@ const AiSupplyPage = () => {
               viewport={{ once: true }}
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.5 }}
               style={{ willChange: "transform, opacity" }}
-              className="w-full md:w-1/2 min-h-[400px] md:min-h-auto bg-gray-100 relative"
+              className="w-full md:w-1/2 min-h-[400px] md:min-h-auto bg-[#F3F4F6] relative"
             >
               <Image
                 src="/ImageOne.png"

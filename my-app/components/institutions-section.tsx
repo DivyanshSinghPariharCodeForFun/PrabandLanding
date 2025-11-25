@@ -75,7 +75,7 @@ export default function InstitutionsSection() {
   }
 
   return (
-    <section className="bg-background py-20 md:py-32">
+    <section id="institutions" className="bg-white py-20 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid md:grid-cols-2 gap-12 items-stretch min-h-[600px]">
           
@@ -86,7 +86,7 @@ export default function InstitutionsSection() {
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
             style={{ willChange: "transform, opacity" }}
-            className="relative rounded-lg overflow-hidden bg-gradient-to-br from-gray-50 via-orange-50 to-slate-200 p-8 md:p-12"
+            className="relative rounded-lg overflow-hidden bg-gradient-to-br from-[#A5D8FF] via-[#FFA966] to-[#C39CF6] p-8 md:p-12"
           >
             {/* Floating UI Elements */}
             <div className="relative w-full h-full flex flex-col items-center justify-center gap-4">
@@ -98,7 +98,7 @@ export default function InstitutionsSection() {
                 transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.2 }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 style={{ willChange: "transform, opacity" }}
-                className="bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-medium flex items-center gap-2 shadow-lg z-10"
+                className="bg-[#0F2344] text-white px-4 py-2 rounded-md text-sm font-medium flex items-center gap-2 shadow-lg z-10"
               >
                 <FileText className="w-4 h-4" />
                 <span>SaaS</span>
@@ -155,7 +155,7 @@ export default function InstitutionsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 120, damping: 20, delay: 0.1 }}
-                className="text-xs font-bold uppercase tracking-wider text-foreground mb-6"
+                className="text-xs font-bold uppercase tracking-wider text-[#1A4D8F] mb-6"
               >
                 INSTITUTIONS
               </motion.p>
@@ -244,7 +244,7 @@ export default function InstitutionsSection() {
                 <Button 
                   variant="default" 
                   size="lg"
-                  className="bg-foreground text-background hover:bg-foreground/90"
+                  className="bg-[#1A4D8F] text-white hover:bg-[#0F2344]"
                 >
                   View use cases
                 </Button>

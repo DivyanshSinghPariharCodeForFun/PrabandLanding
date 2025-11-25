@@ -35,7 +35,7 @@ const ComparisonSection = () => {
   ];
 
   return (
-    <div className="">
+    <div id="benefits" className="hidden">
 
     
     <div className="text-white min-h-screen flex flex-col items-center justify-center font-sans">
@@ -82,8 +82,8 @@ const ComparisonSection = () => {
           </motion.p>
         </motion.div>
 
-        {/* Comparison Grid Container */}
-        <div className="px-6 md:px-8 lg:px-12">
+        {/* Comparison Grid Container - Hidden */}
+        <div className="px-6 md:px-8 lg:px-12 hidden">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

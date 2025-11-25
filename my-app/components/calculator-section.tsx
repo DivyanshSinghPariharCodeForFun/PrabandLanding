@@ -43,7 +43,7 @@ export default function CalculatorSection() {
     }, [numTeachers, weeklyHours, hourlyValue])
 
     return (
-        <section className="bg-background py-20 md:py-32">
+        <section id="calculator" className="bg-[#F3F4F6] py-20 md:py-32">
             <div className="mx-auto max-w-4xl px-6">
                 {/* Header */}
                 <div className="mb-12 text-center">
@@ -51,7 +51,7 @@ export default function CalculatorSection() {
                         preset="fade-in-blur"
                         speedSegment={0.3}
                         as="h2"
-                        className="text-sm font-semibold uppercase tracking-wider text-foreground mb-4">
+                        className="text-sm font-semibold uppercase tracking-wider text-[#1A4D8F] mb-4">
                         CALCULATOR
                     </TextEffect>
                     <TextEffect
@@ -85,7 +85,7 @@ export default function CalculatorSection() {
                         viewport={{ once: true }}
                         transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
                         style={{ willChange: "transform, opacity" }}
-                        className="bg-gray-50 dark:bg-gray-950 rounded-xl p-8 space-y-8"
+                        className="bg-white border border-[#E5E7EB] rounded-xl p-8 space-y-8"
                     >
                         {/* Number of Teachers */}
                         <motion.div
@@ -100,7 +100,7 @@ export default function CalculatorSection() {
                                 </label>
                                 <motion.span
                                     key={numTeachers}
-                                    initial={{ scale: 1.2, color: '#3b82f6' }}
+                                    initial={{ scale: 1.2, color: '#1A4D8F' }}
                                     animate={{ scale: 1, color: 'inherit' }}
                                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                                     style={{ willChange: "transform" }}
@@ -115,7 +115,7 @@ export default function CalculatorSection() {
                                 max="50"
                                 value={numTeachers}
                                 onChange={(e) => setNumTeachers(Number(e.target.value))}
-                                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-foreground"
+                                className="w-full h-2 bg-[#E5E7EB] rounded-lg appearance-none cursor-pointer accent-[#1A4D8F]"
                             />
                         </motion.div>
 
@@ -132,7 +132,7 @@ export default function CalculatorSection() {
                                 </label>
                                 <motion.span
                                     key={weeklyHours}
-                                    initial={{ scale: 1.2, color: '#3b82f6' }}
+                                    initial={{ scale: 1.2, color: '#1A4D8F' }}
                                     animate={{ scale: 1, color: 'inherit' }}
                                     transition={{ duration: 0.3 }}
                                     className="text-lg font-semibold text-foreground"
@@ -149,7 +149,7 @@ export default function CalculatorSection() {
                                 max="40"
                                 value={weeklyHours}
                                 onChange={(e) => setWeeklyHours(Number(e.target.value))}
-                                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-foreground"
+                                className="w-full h-2 bg-[#E5E7EB] rounded-lg appearance-none cursor-pointer accent-[#1A4D8F]"
                             />
                         </motion.div>
 
@@ -166,7 +166,7 @@ export default function CalculatorSection() {
                                 </label>
                                 <motion.span
                                     key={hourlyValue}
-                                    initial={{ scale: 1.2, color: '#3b82f6' }}
+                                    initial={{ scale: 1.2, color: '#1A4D8F' }}
                                     animate={{ scale: 1, color: 'inherit' }}
                                     transition={{ duration: 0.3 }}
                                     className="text-lg font-semibold text-foreground"
@@ -181,7 +181,7 @@ export default function CalculatorSection() {
                                 step="10"
                                 value={hourlyValue}
                                 onChange={(e) => setHourlyValue(Number(e.target.value))}
-                                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-foreground"
+                                className="w-full h-2 bg-[#E5E7EB] rounded-lg appearance-none cursor-pointer accent-[#1A4D8F]"
                             />
                         </motion.div>
                         <motion.div
@@ -190,7 +190,7 @@ export default function CalculatorSection() {
                             viewport={{ once: true }}
                             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.6 }}
                             style={{ willChange: "transform, opacity" }}
-                            className="dark:bg-gray-900 rounded-xl p-8"
+                            className="bg-[#1A4D8F] text-white rounded-xl p-8"
                         >
                             <div className="space-y-4">
                                 <motion.p
@@ -198,7 +198,7 @@ export default function CalculatorSection() {
                                     initial={{ opacity: 0, x: -10 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.4 }}
-                                    className="text-xl font-semibold text-foreground"
+                                    className="text-xl font-semibold text-white"
                                 >
                                     You're losing ~{calculations.monthlyHours} hours/month to repetitive tasks.
                                 </motion.p>
@@ -207,7 +207,7 @@ export default function CalculatorSection() {
                                     initial={{ opacity: 0, x: -10 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.4, delay: 0.1 }}
-                                    className="text-xl font-semibold text-foreground"
+                                    className="text-xl font-semibold text-white"
                                 >
                                     That's Rs. {calculations.monthlyCost.toLocaleString('en-IN')}/month in time costs.
                                 </motion.p>
@@ -237,12 +237,6 @@ export default function CalculatorSection() {
                             transition={{ type: "spring", stiffness: 300, damping: 20 }}
                             style={{ willChange: "transform" }}
                         >
-                            <Button
-                                asChild
-                                size="lg"
-                                className="w-full rounded-lg bg-foreground text-background hover:bg-foreground/90 px-8 py-6 text-base font-medium">
-                                <a href="#contact">Get a custom automation plan</a>
-                            </Button>
                         </motion.div>
                     </motion.div>
 

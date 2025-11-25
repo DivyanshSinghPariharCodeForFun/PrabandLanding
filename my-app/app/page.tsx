@@ -7,6 +7,7 @@ import ProcessSection from "@/components/process-section";
 import CalculatorSection from "@/components/calculator-section";
 import InstitutionsSection from "@/components/institutions-section";
 import BenefitsSection from "@/components/benefits-section";
+import ContactSection from "@/components/contact-section";
 import FAQSection from "@/components/faq-section";
 import Footer from "@/components/footer";
 import { WordsPreloader } from "@/components/words-preloader";
@@ -35,6 +36,7 @@ export default function Home() {
           <CalculatorSection />
           <InstitutionsSection />
           <BenefitsSection />
+          <ContactSection />
           <FAQSection />
           <Footer />
         </>

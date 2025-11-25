@@ -43,9 +43,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative border-t border-border bg-background">
+    <footer id="contact" className="relative border-t border-[#E5E7EB] bg-[#F3F4F6]">
       {/* Gradient Background Effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background to-background opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F3F4F6] to-white opacity-50" />
       
       <div className="relative mx-auto max-w-7xl px-6 py-12 md:py-16 lg:px-12">
         <motion.div
@@ -88,7 +88,7 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-background text-muted-foreground transition-all duration-200 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                      className="group flex h-10 w-10 items-center justify-center rounded-lg border border-[#E5E7EB] bg-white text-[#6B7280] transition-all duration-200 hover:border-[#1A4D8F] hover:bg-[#1A4D8F] hover:text-white"
                       aria-label={social.name}
                     >
                       <Icon className="h-4 w-4 transition-transform duration-200 group-hover:scale-110" />
@@ -106,7 +106,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h3 className="mb-4 text-sm font-semibold text-foreground">Product</h3>
+            <h3 className="mb-4 text-sm font-semibold text-[#1F2937]">Product</h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link, index) => (
                 <motion.li
@@ -118,7 +118,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground transition-colors duration-150 hover:text-foreground"
+                    className="text-sm text-[#6B7280] transition-colors duration-150 hover:text-[#1F2937]"
                   >
                     {link.name}
                   </Link>
@@ -146,7 +146,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground transition-colors duration-150 hover:text-foreground"
+                    className="text-sm text-[#6B7280] transition-colors duration-150 hover:text-[#1F2937]"
                   >
                     {link.name}
                   </Link>
@@ -174,7 +174,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground transition-colors duration-150 hover:text-foreground"
+                    className="text-sm text-[#6B7280] transition-colors duration-150 hover:text-[#1F2937]"
                   >
                     {link.name}
                   </Link>
@@ -202,7 +202,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground transition-colors duration-150 hover:text-foreground"
+                    className="text-sm text-[#6B7280] transition-colors duration-150 hover:text-[#1F2937]"
                   >
                     {link.name}
                   </Link>
@@ -215,7 +215,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-border pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-[#6B7280]">
               © {currentYear} Prabhand. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">

@@ -85,7 +85,7 @@ export default function ProcessSection() {
     const currentStep = processSteps.find((_, index) => tabs[index].id === activeTab) || processSteps[0]
 
     return (
-        <section className="bg-background py-20 md:py-32">
+        <section id="process" className="bg-white py-20 md:py-32">
             <div className="mx-auto max-w-7xl px-6">
                 {/* Header */}
                 <div className="mb-16 text-center">
@@ -93,7 +93,7 @@ export default function ProcessSection() {
                         preset="fade-in-blur"
                         speedSegment={0.3}
                         as="h2"
-                        className="text-sm font-semibold uppercase tracking-wider text-foreground mb-4">
+                        className="text-sm font-semibold uppercase tracking-wider text-[#1A4D8F] mb-4">
                         PROCESS
                     </TextEffect>
                     <TextEffect
@@ -114,7 +114,7 @@ export default function ProcessSection() {
                     transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.3 }}
                     className="flex justify-center mb-16"
                 >
-                    <div className="bg-gray-100 dark:bg-gray-800 rounded-2xl px-4 py-3 shadow-sm flex gap-3 flex-wrap justify-center">
+                    <div className="bg-white border border-[#E5E7EB] rounded-2xl px-4 py-3 shadow-sm flex gap-3 flex-wrap justify-center">
                         {tabs.map((tab, index) => {
                             const IconComponent = tab.icon
                             return (
@@ -130,8 +130,8 @@ export default function ProcessSection() {
                                     style={{ willChange: "transform" }}
                                     className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-base font-medium transition-all ${
                                         activeTab === tab.id
-                                            ? 'bg-white dark:bg-gray-50 text-gray-900 border border-gray-200 dark:border-gray-300'
-                                            : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                                            ? 'bg-[#1A4D8F] text-white border border-[#1A4D8F]'
+                                            : 'bg-[#F3F4F6] text-[#6B7280] hover:bg-[#E5E7EB]'
                                     }`}
                                 >
                                     <IconComponent />
@@ -235,7 +235,7 @@ export default function ProcessSection() {
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 300, damping: 20 }}
                             style={{ willChange: "transform" }}
-                            className="bg-gray-100 dark:bg-gray-900 rounded-2xl aspect-square p-12 relative overflow-hidden"
+                            className="bg-white border border-[#E5E7EB] rounded-2xl aspect-square p-12 relative overflow-hidden"
                         >
                             {/* Abstract pattern background */}
                             <motion.div
@@ -257,7 +257,7 @@ export default function ProcessSection() {
                                             y2="400"
                                             stroke="currentColor"
                                             strokeWidth="0.5"
-                                            className="text-gray-400"
+                                            className="text-[#A5D8FF]"
                                         />
                                     ))}
                                     {Array.from({ length: 20 }).map((_, i) => (
@@ -272,7 +272,7 @@ export default function ProcessSection() {
                                             y2={i * 20}
                                             stroke="currentColor"
                                             strokeWidth="0.5"
-                                            className="text-gray-400"
+                                            className="text-[#A5D8FF]"
                                         />
                                     ))}
                                 </svg>
@@ -301,7 +301,7 @@ export default function ProcessSection() {
                                         ease: "easeInOut"
                                     }}
                                     style={{ willChange: "transform" }}
-                                    className="w-32 h-32 rounded-full bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-700 dark:to-gray-900 shadow-lg"
+                                    className="w-32 h-32 rounded-full bg-gradient-to-br from-[#4CA8FF] to-[#1A4D8F] shadow-lg"
                                 />
                             </motion.div>
                         </motion.div>

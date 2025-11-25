@@ -32,14 +32,25 @@ export default function HeroSection() {
             <HeroHeader />
 
             <main className="overflow-hidden [--color-primary-foreground:var(--color-white)] [--color-primary:var(--color-green-600)]">
-                <section>
-                    <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 lg:pt-48">
+                <section className="relative min-h-screen bg-[#0F2344]">
+                    {/* Background Pattern - Grid Lines Only */}
+                    <div className="absolute inset-0 overflow-hidden">
+                        {/* Grid Lines */}
+                        <div 
+                            className="absolute inset-0 opacity-30"
+                            style={{
+                                backgroundImage: 'repeating-linear-gradient(90deg, rgba(255,255,255,0.3) 0px, rgba(255,255,255,0.3) 1px, transparent 1px, transparent 120px)'
+                            }}
+                        />
+                    </div>
+                    
+                    <div className="relative z-10 mx-auto max-w-6xl px-6 pb-20 pt-32 lg:pt-48">
                         <div className="relative z-10 mx-auto max-w-4xl text-center">
                             <TextEffect
                                 preset="fade-in-blur"
                                 speedSegment={0.3}
                                 as="h1"
-                                className="text-balance text-5xl font-medium md:text-6xl">
+                                className="text-balance text-5xl font-medium text-white md:text-6xl">
                                 Your Complete Education Management System
                             </TextEffect>
                             <TextEffect
@@ -48,7 +59,7 @@ export default function HeroSection() {
                                 speedSegment={0.3}
                                 delay={0.5}
                                 as="p"
-                                className="mx-auto mt-6 max-w-2xl text-pretty text-lg">
+                                className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-white/90">
                                 Replace manual registers, WhatsApp groups, and scattered tools with one unified platform. Teach better, manage smarter, and grow faster.
                             </TextEffect>
 
@@ -68,12 +79,12 @@ export default function HeroSection() {
                                 <form
                                     action=""
                                     className="mx-auto max-w-sm">
-                                    <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.5rem)] border pr-2 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
-                                        <Mail className="pointer-events-none absolute inset-y-0 left-4 my-auto size-4" />
+                                    <div className="bg-white/10 backdrop-blur-sm has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.5rem)] border border-white/20 pr-2 shadow-lg shadow-black/20 has-[input:focus]:ring-2 has-[input:focus]:ring-[#4CA8FF]">
+                                        <Mail className="pointer-events-none absolute inset-y-0 left-4 my-auto size-4 text-white/70" />
 
                                         <input
                                             placeholder="Enter your email address"
-                                            className="h-12 w-full bg-transparent pl-12 focus:outline-none"
+                                            className="h-12 w-full bg-transparent pl-12 text-white placeholder:text-white/60 focus:outline-none"
                                             type="email"
                                         />
 
@@ -105,7 +116,6 @@ export default function HeroSection() {
                                             <div className="bg-muted rounded-[1rem] p-4 pb-16 dark:bg-white/5"></div>
                                         </div>
                                     </div>
-                                    <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] mix-blend-overlay [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] dark:opacity-5"></div>
                                 </div>
                             </AnimatedGroup>
                         </div>
